@@ -8,6 +8,7 @@ A lightweight budgeting app with AI-driven saving tips, spending insights, and c
 - `docs/requirements.md` — Business, functional, and non-functional requirements.
 - `docs/ai-agent.md` — AI agent capabilities, behavior, and sample responses.
 - `docs/flowchart.md` — Initial app flow and interaction steps.
+- `security_development_and_test.md` - Security Design
 
 ## Purpose
 
