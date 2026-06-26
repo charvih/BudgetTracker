@@ -10,6 +10,42 @@ Bloom Budget is a teen-friendly expense tracker built with Next.js. It helps use
 - editable expense history
 - AI insights and saving tips via Base44 agent prompt simulation
 
+## Process flow
+
+```mermaid
+flowchart LR
+    subgraph Manual["Manual"]
+        Text["Text / SMS / Slack"]
+        Invoice["Invoice / Photo"]
+    end
+
+    subgraph Automatic["Automatic"]
+        BankAPI["Bank API"]
+    end
+
+    Text --> Triage["Triage"]
+    Invoice --> Triage
+    BankAPI --> Triage
+
+    Triage -->|Known| Log[("Log")]
+    Triage -->|Unknown| Human["Human review"]
+    Human --> Log
+
+    Log --> Agents
+
+    subgraph Agents["Agents"]
+        Monthly["Monthly"]
+        Overspend["Overspend"]
+        Tips["Tips"]
+        Docs["Docs"]
+        Budgets["Budgets"]
+        Fraud["Fraud"]
+        Subs["Forgotten subscriptions"]
+    end
+
+    Agents --> User["User"]
+```
+
 ## Run locally
 
 1. Install dependencies:
