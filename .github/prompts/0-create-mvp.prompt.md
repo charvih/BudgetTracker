@@ -1,0 +1,15 @@
+Be the developer, Create Bloom Budget, is a smart expense tracker designed for teenagers to build healthy financial habits. It lets users manually log expenses, view monthly summaries, and receive AI-generated saving tips and spending insights written in a fun, warm Asian tone — making money management approachable and engaging for young users.
+Audience & Roles
+Primary audience: teenagers (ages 13–19). Single user role — no admin/multi-user distinction needed. Each user manages their own expense log and views their own insights. No authentication complexity required beyond basic login.
+Core Flows
+These flows must work end-to-end:
+User logs in → lands on Dashboard showing monthly spending summary, top categories, and a flower-themed welcome greeting
+User opens Expense Form → fills in Amount, Category (Food, Transport, Shopping, Entertainment, Education, Other), Date, and Description → saves → expense appears in history list
+User views Monthly Summary page → sees total spent, breakdown by category with visual charts, and a comparison to previous month
+App generates AI financial insights → based on entered expenses, the AI produces personalized saving tips and spending insights written in a fun, encouraging Asian tone (e.g. like a wise older sibling or auntie giving advice) — shown in a dedicated 'Insights & Tips' section
+User can view, edit, or delete past expense entries from the expense history list
+Triage flow from flowchart: each expense entry is categorized and routed to relevant agents — Monthly summary agent, Overspend alert agent, Tips agent, Budget agent — which feed into the AI insights panel
+Technical Requirements
+AI-generated insights using Base44 AI agent — prompt engineered to respond in a fun, encouraging Asian older-sibling/auntie tone with saving tips and spending pattern observations based on the user's actual expense data. Entities needed: Expense (amount, category, date, description, created_date). Monthly aggregation computed from expense data. No bank API or automatic import in this version — manual entry only (as scoped from the flowchart's manual branch).
+Design Preferences
+Light, airy color palette inspired by the sample UI: soft sage green (#A8C5A0), warm cream (#FAF7F2), blush pink (#F4D7DA), and gentle lavender accents. Floral motifs — cherry blossoms, plum flowers, and small botanical illustrations — woven into cards, backgrounds, and section dividers. Dashboard layout: modular card grid similar to the sample UI with stat cards at the top, chart in the middle, and insights/tips below. Typography: rounded, friendly sans-serif for headings; clean body text. Sidebar navigation with icon labels. Overall feel: Modern SaaS meets soft Asian stationery aesthetic — think Kakao Friends meets a clean finance dashboard. Subtle floral watercolor textures on card backgrounds. Fun emoji and playful micro-copy throughout the AI tips section.
