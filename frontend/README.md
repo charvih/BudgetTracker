@@ -34,7 +34,7 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 ## How to run
 
 ```sh
-cd /Users/meganlau/personal-projects/BudgetTracker/frontend
+cd ./frontend
 npm run dev
 ```
 Open the local Vite URL shown in terminal
